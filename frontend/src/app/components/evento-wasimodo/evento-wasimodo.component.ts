@@ -3,6 +3,7 @@ import { Evento } from "src/app/models/eventos";
 import { EventosService } from "src/app/services/eventos.service";
 import { OwlOptions, CarouselComponent } from "ngx-owl-carousel-o";
 import { EventosSharedService } from "src/app/services/eventos-shared.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-evento-wasimodo",

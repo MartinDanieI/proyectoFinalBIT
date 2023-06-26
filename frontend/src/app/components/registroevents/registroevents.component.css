@@ -10,12 +10,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
-        background-image:url('https://i.pinimg.com/originals/99/8e/05/998e055aba57c24138220937cc5166ab.gif') ;
+        height: 800px;
         background-size: cover;
+        background-color: rgb(28, 28, 28);
         background-position: center;
         background-attachment: fixed;
-        padding: 50px;
 
     }
     .box{
