@@ -95,7 +95,7 @@ export class EventoWasimodoComponent implements OnInit, AfterViewInit {
   
 
   addMouseWheelEventListener() {
-    const scrollThreshold = 90; // Adjust this value to control the scroll sensitivity
+    const scrollThreshold = 60; // Adjust this value to control the scroll sensitivity
   
     this.carousel.el.nativeElement.addEventListener('wheel', (event: WheelEvent) => {
       if (Math.abs(event.deltaY) >= scrollThreshold) {

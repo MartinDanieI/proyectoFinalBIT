@@ -6,6 +6,7 @@ import { ErrorPagina404Component } from './components/error-pagina404/error-pagi
 import { RegistroeventsComponent } from './components/registroevents/registroevents.component';
 import { EventoWasimodoComponent } from './components/evento-wasimodo/evento-wasimodo.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
     {path:'registroEventos', component: RegistroeventsComponent},
     {path: 'eventowasimodo', component: EventoWasimodoComponent},
     {path: 'registro-usuarios', component: RegistroComponent},
+    {path: 'perfil', component: PerfilComponent},
     {path:'**', redirectTo:'404',pathMatch:'full'}
 ];
 

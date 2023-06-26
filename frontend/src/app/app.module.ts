@@ -19,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventoNombreComponent } from './components/evento-nombre/evento-nombre.component';
 import { EventosSharedService } from './services/eventos-shared.service';
 import { RegistroComponent } from './components/registro/registro.component';
+import { LoginComponent } from './components/login/login.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { RegistroComponent } from './components/registro/registro.component';
     EventoWasimodoComponent,
     EventoNombreComponent,
     RegistroComponent,
+    LoginComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

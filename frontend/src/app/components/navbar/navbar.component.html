@@ -27,9 +27,27 @@
                     <i class='link-icon'>
                         <img src="../../../assets/img/login-icon.svg" alt="">
                     </i>
-                    <span class="link-text">Login</span>
+                    <span class="link-text">Registro</span>
                    </span>
             </li>
+
+            <li class="nav-list" *ngIf="isAuthenticated" (click)="logout()">
+                <span class="link-item">
+                  <i class='link-icon'>
+                    <img src="../../../assets/img/logout.svg" alt="" width="35px">
+                  </i>
+                  <span class="link-text">Cerrar sesión</span>
+                </span>
+              </li>
+
+            <li class="nav-list" *ngIf="!isAuthenticated" (click)="openOffCanvas('offcanvasExample3')">
+                <span class="link-item ">
+                 <i class='link-icon'>
+                     <img src="../../../assets/img/login-icon.svg" alt="">
+                 </i>
+                 <span class="link-text">Login</span>
+                </span>
+         </li>
 
             <li class="nav-list link-item" >
                 <i class='link-icon'>
@@ -64,4 +82,7 @@
     </app-sidebar>
     <app-sidebar [offcanvasId]="'offcanvasExample2'" [offcanvasTitle]="'Registro de usuarios'">
         <app-registro></app-registro>
+    </app-sidebar>
+    <app-sidebar [offcanvasId]="'offcanvasExample3'" [offcanvasTitle]="'login'">
+        <app-login></app-login>
     </app-sidebar>

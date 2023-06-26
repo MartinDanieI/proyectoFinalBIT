@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Offcanvas } from 'bootstrap';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,8 @@ import { Offcanvas } from 'bootstrap';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  constructor() { }
+  isAuthenticated!: boolean;
+  constructor(private authService: AuthService) { }
 
   initializeLinkItems(): void {
     const linkItems: NodeListOf<Element> = document.querySelectorAll(".link-item");
@@ -31,5 +33,12 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.initializeLinkItems();
+    this.isAuthenticated = this.authService.isAuthenticated();
+  }
+
+
+  logout() {
+    this.authService.logout();
+    this.isAuthenticated = false;
   }
 }
