@@ -50,7 +50,7 @@ export class EventoWasimodoComponent implements OnInit, AfterViewInit {
     touchDrag: false,
     pullDrag: false,
     items: 3,
-    stagePadding: 300,
+    stagePadding: 350,
     dots: false,
     nav: false,
     responsive: {

@@ -67,6 +67,6 @@ export class NavbarComponent implements OnInit, OnDestroy, AfterViewChecked {
   logout() {
     this.authService.logout();
     this.isAuthenticated = false;
-    this.router.navigate(['/eventowasimodo']);
+    this.router.navigate(['/eventowasimodo']); // Reemplaza '/ruta-deseada' con la ruta a la que deseas dirigir al usuario después de cerrar sesión
   }
 }
