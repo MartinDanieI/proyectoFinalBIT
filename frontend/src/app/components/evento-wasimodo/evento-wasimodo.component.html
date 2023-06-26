@@ -1,0 +1,17 @@
+<div class="container-events">
+  <owl-carousel-o
+  #carousel
+  [options]="customOptions"
+  (translate)="onCarouselTranslate($event)"
+  (translated)="onCarouselTranslate($event)">
+    <ng-container *ngFor="let evento of listaEventos">
+      <ng-template carouselSlide>
+        <div class="image-container">
+          <img [src]="evento.imagen" alt="Portrait Image" class="carousel-image-portrait" />
+          <h3>{{ evento.nombre }}</h3>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+
+</div>

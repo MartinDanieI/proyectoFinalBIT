@@ -14,4 +14,9 @@ url_api = "http://localhost:4002/events"
   crearEvento(evento: Evento): Observable<any> {
     return this.http.post(this.url_api, evento);
   }
+
+
+  obtenerEventos(): Observable<any> {
+    return this.http.get<Evento[]>(`${this.url_api}?limit=20`);
+  }
 }

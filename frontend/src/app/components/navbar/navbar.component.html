@@ -5,58 +5,56 @@
 <link rel="stylesheet" href="navbar.component.css">
 
     <nav class="nav">
+
+          
+        <div class="brand-wrapper">
+            <span class="logo-container">
+                <img src="../../../assets/img/logo2.svg" alt="" width="130px"> 
+            </span>
+            </div>
+        
         <ul class="nav-content">
-            <li class="nav-list">
-                <a href="#" class="link-item active">
-                    <i class='bx bxs-home link-icon'></i>
-                    <span class="link-text ">inicio</span>
-                </a>
+            <li class="nav-list" routerLink="/eventowasimodo">
+                    <span class="link-item active"> 
+                        <i class='link-icon'>
+                            <img src="../../../assets/img/iconamoon_home.svg" alt="">
+                        </i>
+                        <span class="link-text ">inicio</span>
+                    </span>
             </li>
             <li class="nav-list">
-                <a href="#" class="link-item">
-                    <i class='bx bxs-caret-right-square link-icon'></i>
+                   <span class="link-item ">
+                    <i class='link-icon'>
+                        <img src="../../../assets/img/login-icon.svg" alt="">
+                    </i>
                     <span class="link-text">Login</span>
-                </a>
-            </li>
-            <li class="nav-list">
-                <a href="#" class="link-item">
-                    <i class='bx bxs-bar-chart-square link-icon'></i>
-                    <span class="link-text">contacto</span>
-                </a>
-            </li>
-            <li class="nav-list">
-                <a href="#" class="link-item">
-                    <i class='bx bxs-message-rounded link-icon'></i>
-                    <span class="link-text">productos</span>
-                </a>
-            </li>
-            <li class="nav-list">
-                <a href="#" class="link-item">
-                    <i class='bx bxs-user link-icon'></i>
-                    <span class="link-text">organizadores de eventos</span>
-                </a>
+                   </span>
             </li>
 
-            <li class="nav-list" routerLink="/registroEventos">
+            <li class="nav-list link-item" >
+                <i class='link-icon'>
+                    <img src="../../../assets/img/cart-icon.svg">
+                </i>
+                <span class="link-text">Carrito</span>
+        </li>
+            <li class="nav-list link-item" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                
+                    <i class='link-icon'>
+                        <img src="../../../assets/img/add-event-icon.svg">
+                    </i>
+                    <span class="link-text">Registra un evento</span>
+            </li>
 
-                    <i class='bx bxs-user link-icon'></i>
-                    <span class="link-text">registro de eventos</span>
+            <li class="nav-list link-item">
+
+                    <i class='link-icon'>
+                        <img src="../../../assets/img/menu-icon.svg" alt="">
+                    </i>
+                    <span class="link-text">Menú</span>
 
             </li>
 
             <span class="indicator"></span>
         </ul>
-
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            Button with data-bs-target
-          </button>
-
-          
-        <div class="brand-wrapper">
-            <p class="letra letraPrincipal">
-                Hope❤️Events
-            </p>
-            </div>
         <script src="navbar.component.ts"></script>
-
     </nav>

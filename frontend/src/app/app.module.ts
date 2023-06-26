@@ -13,6 +13,11 @@ import { RegistroeventsComponent } from './components/registroevents/registroeve
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MostrarEventosComponent } from './components/mostrar-eventos/mostrar-eventos.component';
+import { EventoWasimodoComponent } from './components/evento-wasimodo/evento-wasimodo.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EventoNombreComponent } from './components/evento-nombre/evento-nombre.component';
+import { EventosSharedService } from './services/eventos-shared.service';
 
 @NgModule({
   declarations: [
@@ -26,14 +31,18 @@ import { MostrarEventosComponent } from './components/mostrar-eventos/mostrar-ev
     GestionProductosFormularioComponent,
     RegistroeventsComponent,
     MostrarEventosComponent,
+    EventoWasimodoComponent,
+    EventoNombreComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
-  providers: [],
+  providers: [EventosSharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

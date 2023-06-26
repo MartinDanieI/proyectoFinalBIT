@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EventosService } from './eventos.service';
+import { EventosSharedService } from './eventos-shared.service';
 
-describe('EventosService', () => {
-  let service: EventosService;
+describe('EventosSharedService', () => {
+  let service: EventosSharedService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(EventosService);
+    service = TestBed.inject(EventosSharedService);
   });
 
   it('should be created', () => {
