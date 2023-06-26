@@ -23,7 +23,7 @@
                     </span>
             </li>
             <li class="nav-list" (click)="openOffCanvas('offcanvasExample2')">
-                   <span class="link-item ">
+                   <span class="link-item">
                     <i class='link-icon'>
                         <img src="../../../assets/img/login-icon.svg" alt="">
                     </i>
@@ -31,8 +31,8 @@
                    </span>
             </li>
 
-            <li class="nav-list" *ngIf="isAuthenticated" (click)="logout()">
-                <span class="link-item">
+            <li class="nav-list link-item" *ngIf="isAuthenticated" (click)="logout()">
+                <span>
                   <i class='link-icon'>
                     <img src="../../../assets/img/logout.svg" alt="" width="35px">
                   </i>
@@ -41,13 +41,22 @@
               </li>
 
             <li class="nav-list" *ngIf="!isAuthenticated" (click)="openOffCanvas('offcanvasExample3')">
-                <span class="link-item ">
+                <span class="link-item">
                  <i class='link-icon'>
                      <img src="../../../assets/img/login-icon.svg" alt="">
                  </i>
                  <span class="link-text">Login</span>
                 </span>
-         </li>
+            </li>
+
+            <li class="nav-list" *ngIf="isAuthenticated" routerLink="/perfil">
+                <span class="link-item">
+                 <i class='link-icon'>
+                     <img src="../../../assets/img/user-icon.svg" alt="">
+                 </i>
+                 <span class="link-text">Profile</span>
+                </span>
+            </li>
 
             <li class="nav-list link-item" >
                 <i class='link-icon'>
