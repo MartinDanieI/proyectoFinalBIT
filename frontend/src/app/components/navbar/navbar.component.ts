@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Offcanvas } from 'bootstrap';
 
 @Component({
   selector: 'app-navbar',
@@ -20,6 +21,12 @@ export class NavbarComponent implements OnInit {
         indicator.style.left = `${index * 95 + 48}px`;
       });
     });
+  }
+
+  openOffCanvas(offcanvasId: string) {
+    const offCanvasElement = document.getElementById(offcanvasId)!;
+    const offCanvas = new Offcanvas(offCanvasElement);
+    offCanvas.show();
   }
 
   ngOnInit(): void {

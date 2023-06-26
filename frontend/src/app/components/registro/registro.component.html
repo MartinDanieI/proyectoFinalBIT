@@ -1,0 +1,68 @@
+<div class="login-box">
+    <div class="header-container">
+        <img src="../../../assets/img/logo2.svg" alt="" width="50px">
+        <h1 class="title-form">Registrate!</h1>
+    </div>
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="user-box">        
+            <input type="text" formControlName="nombre">
+            <label>
+                Nombre
+            </label>
+            <div *ngIf="formulario.get('nombre')?.invalid && formulario.get('nombre')?.dirty" class="error">
+              El nombre es requerido
+            </div>
+          
+    </div>
+    <div class="user-box">        
+            <input type="number" formControlName="edad">
+            <label>
+                Edad
+            </label>
+            <div *ngIf="formulario.get('edad')?.invalid && formulario.get('edad')?.dirty" class="error">
+              La edad es requerida y debe ser mayor de 18 años
+            </div>          
+    </div>
+    <div class="user-box">        
+            <input type="email" formControlName="correo">
+            <label>
+                Correo
+            </label>
+            <div *ngIf="formulario.get('correo')?.invalid && formulario.get('correo')?.dirty" class="error">
+              El correo es requerido y debe ser una dirección de correo válida
+            </div>          
+    </div>
+    <div class="user-box">        
+            <input type="text" formControlName="userName">
+            <label>
+                Username
+            </label>
+            <div *ngIf="formulario.get('userName')?.invalid && formulario.get('userName')?.dirty" class="error">
+              El username es requerido
+            </div>
+          
+    </div>
+    <div class="user-box">    
+            <input type="password" formControlName="password">
+            <label>
+                Contraseña
+            </label>
+            <div *ngIf="formulario.get('password')?.invalid && formulario.get('password')?.dirty" class="error">
+              La contraseña es requerida y debe tener al menos 6 caracteres
+            </div>
+          
+    </div>
+    <div class="user-box">
+       
+            <input type="text" formControlName="preferencias">
+            <label>
+                Preferencias
+            </label>       
+    </div>
+   <div class="btn-container">
+    <button class="btn boton" type="submit" [disabled]="formulario.invalid">
+        Registrar
+    </button>
+   </div>
+  </form>
+</div>

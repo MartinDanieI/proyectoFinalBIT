@@ -18,6 +18,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventoNombreComponent } from './components/evento-nombre/evento-nombre.component';
 import { EventosSharedService } from './services/eventos-shared.service';
+import { RegistroComponent } from './components/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { EventosSharedService } from './services/eventos-shared.service';
     MostrarEventosComponent,
     EventoWasimodoComponent,
     EventoNombreComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,

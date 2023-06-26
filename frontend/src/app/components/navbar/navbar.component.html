@@ -22,7 +22,7 @@
                         <span class="link-text ">inicio</span>
                     </span>
             </li>
-            <li class="nav-list">
+            <li class="nav-list" (click)="openOffCanvas('offcanvasExample2')">
                    <span class="link-item ">
                     <i class='link-icon'>
                         <img src="../../../assets/img/login-icon.svg" alt="">
@@ -37,7 +37,7 @@
                 </i>
                 <span class="link-text">Carrito</span>
         </li>
-            <li class="nav-list link-item" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <li class="nav-list link-item" (click)="openOffCanvas('offcanvasExample1')">
                 
                     <i class='link-icon'>
                         <img src="../../../assets/img/add-event-icon.svg">
@@ -58,3 +58,10 @@
         </ul>
         <script src="navbar.component.ts"></script>
     </nav>
+
+    <app-sidebar [offcanvasId]="'offcanvasExample1'" [offcanvasTitle]="'Registro de eventos'">
+        <app-registroevents></app-registroevents>
+    </app-sidebar>
+    <app-sidebar [offcanvasId]="'offcanvasExample2'" [offcanvasTitle]="'Registro de usuarios'">
+        <app-registro></app-registro>
+    </app-sidebar>
