@@ -1,0 +1,41 @@
+<div class="" style="margin-top: 8rem;">
+  <div class="d-flex flex-wrap justify-content-center mt-5 gap-5">
+
+
+    <!-- card -->
+    <div style="width: 18rem;" class="border border-1 rounded-4" *ngFor="let event of this.eventosService.eventsList">
+      
+      <div class="d-flex justify-content-center rounded">
+        <img class="img-fluid w-100" src="{{event.imagen}}" alt="">
+      </div>
+
+      <div class="p-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <a class="btn {{event.estado ? 'btn-success' : 'btn-danger'}}">
+            {{event.estado ? 'Activo' : 'Inactivo'}}
+          </a>
+  
+          <span>
+            ⭐️
+          </span>
+        </div>
+  
+        <div class="mt-5">
+          
+          <p class="fw-bolder fs-5">{{event.nombre}}</p>
+          <p class="fw-ligth text-secondary">{{event.descripcion}}</p>
+  
+          <div class="border border-1 p-2 rounded-pill">
+            <span class="text-secondary">📅  {{event.fecha}} - {{event.hora}}</span>
+          </div>
+  
+          <div class="bg-light p-2 rounded-pill mt-3">
+            <span class="text-secondary fw-bold">📍 {{event.lugar}}</span>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

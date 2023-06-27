@@ -7,6 +7,18 @@ exports.default = Router({ mergeParams: true }).get(
     try {
       let categoria = req.params.category;
 
+      if (
+        categoria !== "sociales" &&
+        categoria !== "deportivos" &&
+        categoria !== "culturales" &&
+        categoria !== "familiares" &&
+        categoria !== "festivales"
+      ) {
+        throw "categoria no existe";
+      }
+
+      categoria = `[${categoria.charAt(0).toUpperCase()}${categoria.slice(1)}]`
+
       const eventoEncontrado = await evento.find({ categoria: categoria });
       return res.status(200).json(eventoEncontrado);
     } catch (error) {
