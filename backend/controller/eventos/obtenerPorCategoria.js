@@ -1,13 +1,30 @@
 const { Router } = require("express");
 const evento = require("../../models/evento");
 
-exports.default = Router({ mergeParams: true }).get("/events/:nombre", async (req, res) => {
-  try {
-    const nombre = req.params.nombre;
-    const eventoEncontrado = await evento.findOne({ nombre: nombre });
-    res.send(eventoEncontrado);
-  } catch (error) {
-    console.log(error);
-    res.status(500).send("Hubo un error en el servidor");
+exports.default = Router({ mergeParams: true }).get(
+  "/events/category/:category",
+  async (req, res) => {
+    try {
+      let categoria = req.params.category;
+
+      if (
+        categoria !== "fiestas" &&
+        categoria !== "sociales" &&
+        categoria !== "deportivos" &&
+        categoria !== "culturales" &&
+        categoria !== "familiares" &&
+        categoria !== "festivales"
+      ) {
+        throw "categoria no existe";
+      }
+
+      categoria = `[${categoria.charAt(0).toUpperCase()}${categoria.slice(1)}]`
+
+      const eventoEncontrado = await evento.find({ categoria: categoria });
+      return res.send(eventoEncontrado);
+    } catch (error) {
+      console.log(error);
+      return res.status(400).send("Hubo un error en el servidor", error);
+    }
   }
-});
+);
