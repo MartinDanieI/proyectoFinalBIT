@@ -24,6 +24,7 @@ export class MostrarEventosComponent {
     this.typeEvent = this.activeRoute.snapshot.paramMap.get("type");
 
     if (
+      this.typeEvent !== "" &&
       this.typeEvent !== "fiestas" &&
       this.typeEvent !== "sociales" &&
       this.typeEvent !== "deportivos" &&
@@ -31,11 +32,11 @@ export class MostrarEventosComponent {
       this.typeEvent !== "familiares" &&
       this.typeEvent !== "festivales"
     ) {
-      return this.router.navigate(["/error-pagina404"]);
+      console.log(this.typeEvent)
     }
 
     // llamar al api
-    this.eventosService.eventoPorCategoria(this.typeEvent).subscribe(
+    this.eventosService.eventoPorCategoria(this.typeEvent || "fiestas").subscribe(
       (data) => {
         console.log(data)
         this.eventosService.eventsList = data

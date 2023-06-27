@@ -24,6 +24,7 @@ import { LoginComponent } from './components/login/login.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { DetalleEventoComponent } from './components/detalle-evento/detalle-evento.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
