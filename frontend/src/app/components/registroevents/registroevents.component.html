@@ -20,7 +20,7 @@
                         <input type="" formControlName="descripcion"  placeholder="descripción">
                     </div>
                     <div class="inputBox">
-                        <input type="" formControlName="imagen"  placeholder="url imagen">
+                        <input type="file" (change)="onFileSelected($event)" />
                     </div>
                     <div class="inputBox">
                         <input type="" formControlName="categoria"  placeholder="categoria">

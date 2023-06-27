@@ -11,7 +11,7 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 
 
 const routes: Routes = [
-  { path: "", component: InicioComponent },
+  { path: "", component: EventoWasimodoComponent },
   { path: "productos", component: ProductosGrillaComponent },
   { path: "event/:type", component: MostrarEventosComponent },
   { path: "error-pagina404", component: ErrorPagina404Component },
