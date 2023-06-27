@@ -9,9 +9,15 @@ import { Evento } from '../models/eventos';
 })
 export class EventosService {
 url_api = "http://localhost:4002/events"
+eventsList: any = []
   constructor(private http: HttpClient) {  }
 
   crearEvento(evento: Evento): Observable<any> {
     return this.http.post(this.url_api, evento);
+  }
+
+  
+  eventoPorCategoria(categoria: string) {
+    return this.http.get(`${this.url_api}/category/${categoria}`);
   }
 }

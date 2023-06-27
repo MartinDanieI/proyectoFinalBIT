@@ -1,23 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ElementRef, Renderer2 } from '@angular/core';
 
-import { ProductosGrillaComponent } from './productos.component';
+// ...
 
-describe('ProductosGrillaComponent', () => {
-  let component: ProductosGrillaComponent;
-  let fixture: ComponentFixture<ProductosGrillaComponent>;
+const items: NodeListOf<Element> = document.querySelectorAll("li.letrasUL");
+const eventos: NodeListOf<Element> = document.querySelectorAll(".item");
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ProductosGrillaComponent ]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(ProductosGrillaComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("mouseenter", () => {
+    eventos[i].classList.add("claseflexbasicsenter");
   });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  items[i].addEventListener("mouseleave", () => {
+    eventos[i].classList.remove("claseflexbasicsenter");
   });
-});
+}

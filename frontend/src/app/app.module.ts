@@ -13,6 +13,7 @@ import { RegistroeventsComponent } from './components/registroevents/registroeve
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MostrarEventosComponent } from './components/mostrar-eventos/mostrar-eventos.component';
+import { EventosSocialesComponent } from './components/mostrar-eventos/eventos-sociales/eventos-sociales.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MostrarEventosComponent } from './components/mostrar-eventos/mostrar-ev
     GestionProductosFormularioComponent,
     RegistroeventsComponent,
     MostrarEventosComponent,
+    EventosSocialesComponent,
   ],
   imports: [
     BrowserModule,
