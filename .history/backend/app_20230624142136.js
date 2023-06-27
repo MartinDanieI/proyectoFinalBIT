@@ -16,8 +16,6 @@ app.get("/health", (req, res) =>
   res.status(200).send("Wasimodo API is running!")
 );
 
-app.use('/images', express.static('uploads'));
-
 // Middlewares
 app
   .use(helmet())
