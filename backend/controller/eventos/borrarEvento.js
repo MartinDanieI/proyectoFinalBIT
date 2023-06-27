@@ -5,7 +5,7 @@ exports.default = Router({ mergeParams: true }).delete("/events/:id", async (req
   try {
     const eventoId = req.params.id;
     await evento.findByIdAndRemove(eventoId);
-    res.send("Evento eliminado exitosamente");
+    res.json({msg:"Evento eliminado exitosamente"});
   } catch (error) {
     console.log(error);
     res.status(500).send("Hubo un error en el servidor");
