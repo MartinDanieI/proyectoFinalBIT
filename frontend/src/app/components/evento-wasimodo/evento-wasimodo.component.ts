@@ -68,7 +68,7 @@ export class EventoWasimodoComponent implements OnInit, AfterViewInit {
   };
 
   constructor(private _eventService: EventosService, private eventosSharedService: EventosSharedService,
-    private renderer: Renderer2,
+    private renderer: Renderer2, private router: Router,
     private el: ElementRef) {}
 
   ngOnInit(): void {
@@ -92,7 +92,11 @@ export class EventoWasimodoComponent implements OnInit, AfterViewInit {
       }
     );
   }
+  
 
+  mostrarEvento(evento: any) {
+    this.router.navigate(['/eventos', evento.nombre]);
+  }
   
 
   addMouseWheelEventListener() {

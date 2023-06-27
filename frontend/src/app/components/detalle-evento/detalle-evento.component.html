@@ -1,7 +1,114 @@
-<!-- <div *ngIf="evento">
+<div class="event-details-container d-flex row">
+  <div *ngIf="evento" class="col">
+    <div class="container-principal">
+      <div
+        id="carouselExample1"
+        #carousel1
+        class="carousel slide custom-carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{ evento.imagen }}" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="{{ evento.imagen }}" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="{{ evento.imagen }}" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+      </div>
+      <div
+        id="carouselExample2"
+        #carousel2
+        class="carousel slide custom-carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{ evento.imagen }}" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="{{ evento.imagen }}" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="{{ evento.imagen }}" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+      </div>
+      <!-- Botón regular de Bootstrap -->
+    </div>
+
+
+  </div>
+  <div class="col" style="margin-top: 50px">
     <h2>{{ evento.nombre }}</h2>
-    <p>{{ evento.descripcion }}</p>
-    <p>Fecha: {{ evento.fecha }}</p>
-    <p>Hora: {{ evento.hora }}</p>
-    <p>Lugar: {{ evento.lugar }}</p>
-  </div> -->
+    <div
+      class="col-12" style="height: 1px; background-color: dimgrey; margin-top: 20px"></div>
+    <h6>
+      <ul>
+        <h6 style="margin-top: 30px;">{{ evento.descripcion }}</h6>
+      </ul>
+      <ul>
+        <i class="fa-solid fa-map-location-dot"></i>
+        Lugar:{{
+          evento.lugar
+        }}
+      </ul>
+      <ul>
+        <i class="fa-solid fa-calendar-days"></i>
+        Fecha:{{
+          evento.fecha
+        }}
+      </ul>
+      <ul>
+        <i class="fa-regular fa-clock"></i>
+        Hora:{{
+          evento.hora
+        }}
+      </ul>
+      <ul>
+        <i class="fa-solid fa-font-awesome"></i>
+        Categoria:{{
+          evento.categoria
+        }}
+      </ul>
+    </h6>
+  </div>
+</div>
+
+<div class="containerbutton botonete col">
+
+    <button class="cta col">
+      <span class="hover-underline-animation"> Made  </span>
+      <br>
+      <span class="hover-underline-animation"> in Bogotá </span>
+    </button>
+
+    <button class="cta col " id="nextButton" type="button" (click)="next()" style="margin-left: 350px;">
+        <span class="hover-underline-animation"> Pasar imagen </span>
+        <svg
+          viewBox="0 0 46 16"
+          height="10"
+          width="30"
+          xmlns="http://www.w3.org/2000/svg"
+          id="arrow-horizontal"
+        >
+          <path
+            transform="translate(30)"
+            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+            data-name="Path 10"
+            id="Path_10"
+          ></path>
+        </svg>
+      </button>
+
+      <button class="cta" style="margin-left: 400px;">
+        <span class="hover-underline-animation"> Contacto </span>
+
+      </button>
+
+      <button class="cta" >
+        <span class="hover-underline-animation"> Noticias </span>
+      </button>
+  </div>
+

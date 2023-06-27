@@ -1,4 +1,5 @@
 export class Evento {
+    _id?: string
     categoria: string;
     nombre: string;
     fecha: string;

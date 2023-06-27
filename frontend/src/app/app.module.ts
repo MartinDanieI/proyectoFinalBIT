@@ -8,7 +8,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProductosGrillaComponent } from './components/productos/productos.component';
 import { ErrorPagina404Component } from './components/error-pagina404/error-pagina404.component';
 import { GestionProductosVistaComponent } from './components/admin/gestion-productos-vista/gestion-productos-vista.component';
-import { GestionProductosFormularioComponent } from './components/admin/gestion-productos-formulario/gestion-productos-formulario.component';
 import { RegistroeventsComponent } from './components/registroevents/registroevents.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -32,7 +31,6 @@ import { DetalleEventoComponent } from './components/detalle-evento/detalle-even
     ProductosGrillaComponent,
     ErrorPagina404Component,
     GestionProductosVistaComponent,
-    GestionProductosFormularioComponent,
     RegistroeventsComponent,
     MostrarEventosComponent,
     EventoWasimodoComponent,

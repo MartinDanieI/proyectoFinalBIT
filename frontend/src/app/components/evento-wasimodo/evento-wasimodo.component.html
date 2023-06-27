@@ -7,7 +7,7 @@
   (translated)="onCarouselTranslate($event)">
     <ng-container *ngFor="let evento of listaEventos">
       <ng-template carouselSlide>
-        <div class="image-container">
+        <div class="image-container" (click)="mostrarEvento(evento)">
           <div class="card">
             <div class="first-content">
               <span>

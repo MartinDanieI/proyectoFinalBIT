@@ -7,6 +7,8 @@ import { RegistroeventsComponent } from './components/registroevents/registroeve
 import { EventoWasimodoComponent } from './components/evento-wasimodo/evento-wasimodo.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { DetalleEventoComponent } from './components/detalle-evento/detalle-evento.component';
+import { GestionProductosVistaComponent } from './components/admin/gestion-productos-vista/gestion-productos-vista.component';
 
 
 const routes: Routes = [
@@ -15,9 +17,11 @@ const routes: Routes = [
     {path: 'error-pagina404', component:ErrorPagina404Component},
     {path: ' ProductosComponent', component: ProductosGrillaComponent },
     {path:'registroEventos', component: RegistroeventsComponent},
-    {path: 'eventowasimodo', component: EventoWasimodoComponent},
+    {path: 'eventos', component: EventoWasimodoComponent},
+    {path: 'eventos/:nombre', component: DetalleEventoComponent},
     {path: 'registro-usuarios', component: RegistroComponent},
     {path: 'perfil', component: PerfilComponent},
+    {path: 'gestion-productos-vista', component: GestionProductosVistaComponent},
     {path:'**', redirectTo:'404',pathMatch:'full'}
 ];
 

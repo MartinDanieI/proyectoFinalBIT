@@ -1,1 +1,44 @@
-<p>gestion-productos-vista works!</p>
+
+
+<section class=" vista"  >
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between">
+        <h1>Lista de eventos</h1>
+      </div>
+      <hr>
+    </div>
+    <div class="justify-content-center d-flex m-5 vistaTabla" >
+      <table class="table " *ngIf="listaEventos.length" >
+        <thead>
+          <tr>
+            <th scope="col" class="bg-black text-light fw-bold">Activo</th>
+            <th scope="col" class="bg-black text-light fw-bold">Nombre del evento</th>
+            <th scope="col" class="bg-black text-light fw-bold">Fecha</th>
+            <th scope="col" class="bg-black text-light fw-bold">Hora</th>
+            <th scope="col" class="bg-black text-light fw-bold">lugar</th>
+            <th scope="col" class="bg-black text-light fw-bold">Descripcion</th>
+            <th scope="col" class="bg-black text-light fw-bold">Imagen</th>
+            <th scope="col" class="bg-black text-light fw-bold">Categoria</th>
+            <th scope="col" class="bg-black text-light fw-bold">Acciones</th>
+  
+  
+          </tr>
+        </thead>
+        <tbody *ngFor="let data of listaEventos">
+  
+          <tr>
+            <td class="align-middle">{{data.estado}}</td>
+            <td class="align-middle date">{{data.nombre}}</td>
+            <td class="align-middle">{{data.fecha}}<i class="fa-solid fa-clock"></i> </td>
+            <td class="align-middle">{{data.hora}}</td>
+            <td class="align-middle">{{data.lugar}}</td>
+            <td class="align-middle">{{data.descripcion}}</td>
+            <td class="align-middle"><img src="{{data.imagen}}" alt=""></td>
+            <td class="align-middle">{{data.categoria}}</td>
+            <td class="align-middle"> <i class="fa-solid fa-pencil mx-3 iconTD" ></i> <i class=" iconTD fa-solid fa-trash mx-3" (click)="eliminarEvento(data._id)"></i></td>
+          </tr>
+  
+        </tbody>
+      </table>
+    </div>
+  </section>
