@@ -1,13 +1,11 @@
-@font-face {
-    font-family: 'style-letra';
-    src: url('assets/fonts/Nadine.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    
+}
 body {
     overflow: hidden;
-}
-
-.letraPrincipal{
-    font-family: 'style-letra';
-
+    background: #f7f5f2;
 }

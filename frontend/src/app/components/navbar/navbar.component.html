@@ -5,58 +5,93 @@
 <link rel="stylesheet" href="navbar.component.css">
 
     <nav class="nav">
+
+          
+        <div class="brand-wrapper">
+            <span class="logo-container">
+                <img src="../../../assets/img/logo2.svg" alt="" width="130px" class="logoimg"> 
+            </span>
+            </div>
+        
         <ul class="nav-content">
-            <li class="nav-list">
-                <a href="#" class="link-item active">
-                    <i class='bx bxs-home link-icon'></i>
-                    <span class="link-text ">inicio</span>
-                </a>
+            <li class="nav-list" routerLink="/eventowasimodo">
+                    <span class="link-item active"> 
+                        <i class='link-icon'>
+                            <img src="../../../assets/img/iconamoon_home.svg" alt="">
+                        </i>
+                        <span class="link-text ">inicio</span>
+                    </span>
             </li>
-            <li class="nav-list">
-                <a href="#" class="link-item">
-                    <i class='bx bxs-caret-right-square link-icon'></i>
-                    <span class="link-text">Login</span>
-                </a>
-            </li>
-            <li class="nav-list">
-                <a href="#" class="link-item">
-                    <i class='bx bxs-bar-chart-square link-icon'></i>
-                    <span class="link-text">contacto</span>
-                </a>
-            </li>
-            <li class="nav-list">
-                <a href="#" class="link-item">
-                    <i class='bx bxs-message-rounded link-icon'></i>
-                    <span class="link-text">productos</span>
-                </a>
-            </li>
-            <li class="nav-list">
-                <a href="#" class="link-item">
-                    <i class='bx bxs-user link-icon'></i>
-                    <span class="link-text">organizadores de eventos</span>
-                </a>
+            <li class="nav-list" (click)="openOffCanvas('offcanvasExample2')">
+                   <span class="link-item">
+                    <i class='link-icon'>
+                        <img src="../../../assets/img/newUser.svg" alt="">
+                    </i>
+                    <span class="link-text">Registro</span>
+                   </span>
             </li>
 
-            <li class="nav-list" routerLink="/registroEventos">
+            <li class="nav-list link-item" *ngIf="isAuthenticated" (click)="logout()">
+                <span>
+                  <i class='link-icon'>
+                    <img src="../../../assets/img/logout.svg" alt="" width="35px">
+                  </i>
+                  <span class="link-text">Cerrar sesión</span>
+                </span>
+              </li>
 
-                    <i class='bx bxs-user link-icon'></i>
-                    <span class="link-text">registro de eventos</span>
+            <li class="nav-list" *ngIf="!isAuthenticated" (click)="openOffCanvas('offcanvasExample3')">
+                <span class="link-item">
+                 <i class='link-icon'>
+                     <img src="../../../assets/img/login-icon.svg" alt="">
+                 </i>
+                 <span class="link-text">Login</span>
+                </span>
+            </li>
+
+            <li class="nav-list" *ngIf="isAuthenticated" routerLink="/perfil">
+                <span class="link-item">
+                 <i class='link-icon'>
+                     <img src="../../../assets/img/user-icon.svg" alt="">
+                 </i>
+                 <span class="link-text">Profile</span>
+                </span>
+            </li>
+
+            <li class="nav-list link-item" >
+                <i class='link-icon'>
+                    <img src="../../../assets/img/cart-icon.svg">
+                </i>
+                <span class="link-text">Carrito</span>
+        </li>
+            <li class="nav-list link-item" (click)="openOffCanvas('offcanvasExample1')">
+                
+                    <i class='link-icon'>
+                        <img src="../../../assets/img/add-event-icon.svg">
+                    </i>
+                    <span class="link-text">Registra un evento</span>
+            </li>
+
+            <li class="nav-list link-item">
+
+                    <i class='link-icon'>
+                        <img src="../../../assets/img/menu-icon.svg" alt="">
+                    </i>
+                    <span class="link-text">Menú</span>
 
             </li>
 
             <span class="indicator"></span>
         </ul>
-
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            Button with data-bs-target
-          </button>
-
-          
-        <div class="brand-wrapper">
-            <p class="letra letraPrincipal">
-                Hope❤️Events
-            </p>
-            </div>
         <script src="navbar.component.ts"></script>
-
     </nav>
+
+    <app-sidebar [offcanvasId]="'offcanvasExample1'">
+        <app-registroevents></app-registroevents>
+    </app-sidebar>
+    <app-sidebar [offcanvasId]="'offcanvasExample2'" [offcanvasTitle]="'Registro de usuarios'">
+        <app-registro></app-registro>
+    </app-sidebar>
+    <app-sidebar [offcanvasId]="'offcanvasExample3'" [offcanvasTitle]="'login'">
+        <app-login></app-login>
+    </app-sidebar>

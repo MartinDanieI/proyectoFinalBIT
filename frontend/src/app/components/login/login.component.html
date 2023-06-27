@@ -1,0 +1,21 @@
+<div class="login-box">
+    <div class="header-container">
+        <img src="../../../assets/img/logo2.svg" alt="" width="50px">
+        <h1 class="title-form">Login!</h1>
+    </div>
+    <form [formGroup]="loginForm" (submit)="onSubmit()">
+        <div class="user-box">
+          <label for="userName">Nombre de usuario:</label>
+          <input type="text" id="userName" formControlName="userName">
+        </div>
+        <div class="user-box">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" formControlName="password">
+        </div>
+        
+        <div class="btn-container">
+            <button  class="btn boton" type="submit" [disabled]="!loginForm.valid">Iniciar sesión</button>
+           </div>
+      </form>
+    
+</div>

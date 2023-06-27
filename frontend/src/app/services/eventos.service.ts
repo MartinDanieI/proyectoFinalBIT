@@ -20,4 +20,9 @@ eventsList: any = []
   eventoPorCategoria(categoria: string) {
     return this.http.get(`${this.url_api}/category/${categoria}`);
   }
+  obtenerEventos(): Observable<any> {
+    return this.http.get<Evento[]>(`${this.url_api}?limit=20`);
+  }
 }
+
+  

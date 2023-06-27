@@ -14,6 +14,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MostrarEventosComponent } from './components/mostrar-eventos/mostrar-eventos.component';
 import { EventosSocialesComponent } from './components/mostrar-eventos/eventos-sociales/eventos-sociales.component';
+import { EventoWasimodoComponent } from './components/evento-wasimodo/evento-wasimodo.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EventoNombreComponent } from './components/evento-nombre/evento-nombre.component';
+import { EventosSharedService } from './services/eventos-shared.service';
+import { RegistroComponent } from './components/registro/registro.component';
+import { LoginComponent } from './components/login/login.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { DetalleEventoComponent } from './components/detalle-evento/detalle-evento.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +37,22 @@ import { EventosSocialesComponent } from './components/mostrar-eventos/eventos-s
     RegistroeventsComponent,
     MostrarEventosComponent,
     EventosSocialesComponent,
+    EventoWasimodoComponent,
+    EventoNombreComponent,
+    RegistroComponent,
+    LoginComponent,
+    PerfilComponent,
+    DetalleEventoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
-  providers: [],
+  providers: [EventosSharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
