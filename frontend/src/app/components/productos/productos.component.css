@@ -295,7 +295,7 @@ strong {
 
 #stars::before {
   background-image: radial-gradient(#ffffff 1px, transparent 1%);
-  background-size: 50px 50px;
+  background-size: 20px 20px;
   opacity: 0.5;
 }
 
@@ -413,4 +413,9 @@ strong {
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+
+.titulos{
+  position: relative;
+top: 142px;
 }
